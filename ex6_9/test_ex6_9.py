@@ -1,5 +1,5 @@
 import unittest
-from Ex6_9 import MyClass
+from ex6_9 import MyClass
 
 class TestStringMethods(unittest.TestCase):
     my_class = MyClass()
