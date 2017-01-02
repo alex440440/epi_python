@@ -1,19 +1,12 @@
 import unittest
 from exercise_06_08 import Main
 
-class Test(unittest.TestCase):
+class Test_06_08(unittest.TestCase):
 
     def test1(self):
-        ar = [1,3,1,5]
-        find_max = Main.find_max_twice(ar)
-        print("find_max: ", find_max)
-        self.assertEqual(find_max, 6)
-
-    def test2(self):
-        ar = [1,2,1,2,3,10,100,1000]
-        find_max = Main.find_max_twice(ar)
-        print("find_max: ", find_max)
-        self.assertEqual(find_max, 1000)
+        primes = Main.get_primes(18)
+        print ("primes are "+str(primes))
+        self.assertEqual(primes, [2,3,5,7,11,13,17])
 
 if __name__ == '__main__':
     unittest.main()
