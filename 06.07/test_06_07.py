@@ -1,5 +1,5 @@
 import unittest
-from e_6_7_0 import Main
+from exercise_06_07 import Main
 
 class Test_670(unittest.TestCase):
 
