@@ -11,11 +11,16 @@ class Main:
     #     return out
 
     @staticmethod
-    def apply_permutation(array, permutations):
+    def apply_permutation(array, permutation):
         for i in xrange(len(array)):
-            Main.swap(array,i,permutations[i])
-            Main.swap(permutations,i,permutations[i])
+            Main.swap(array, i, permutation[i])
+            Main.swap(permutation, i, permutation[i])
         return array
+
+    @staticmethod
+    def inverse_permutation(permutation):
+        apply_permutation = Main.apply_permutation(permutation, permutation)
+        return apply_permutation[::-1]
 
 
     @staticmethod
