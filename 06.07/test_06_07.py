@@ -1,7 +1,7 @@
 import unittest
 from exercise_06_07 import Main
 
-class Test(unittest.TestCase):
+class Test_06_07(unittest.TestCase):
 
     def test1(self):
         ar = [1,3,1,5]
