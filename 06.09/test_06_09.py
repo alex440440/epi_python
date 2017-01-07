@@ -18,16 +18,11 @@ class Test_06_09(unittest.TestCase):
         print ("permutations are " + str(out))
         self.assertEqual(out, ['c', 'b', 'a', 'e', 'd'])
 
-    #
-    # def test4(self):
-    #     array = ['a', 'b', 'c', 'd']
-    #     array_copy= array[:]
-    #     permutation = [2,0,1,3]
-    #     permutation_copy = permutation[:]
-    #     permuted = Main.apply_permutation(array, permutation)
-    #     back = Main.apply_permutation(permuted,Main.inverse_permutation(permutation_copy))
-    #     print ("permutations are "+str(back))
-    #     self.assertEqual(back,array_copy)
+
+    def test4(self):
+        permutation = [2,0,1,3]
+        Main.inverse_permuatation(permutation)
+        self.assertEquals(permutation, [1,2,0,3])
 
 
 if __name__ == '__main__':

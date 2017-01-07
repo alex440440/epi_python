@@ -31,7 +31,6 @@ class Main:
             permutation[move_from] -= array_length
             while (True):
                 print("cycle_start: "+str(cycle_start)+", move_from: "+str(move_from)+", move_to: "+str(move_to))
-                print("permutation: "+str(permutation))
 
                 # we go in a cyclical fashion to the next member we can move,
                 # till we arrive to the member that should be moved to the place of one we already moved
@@ -63,6 +62,29 @@ class Main:
             p += array_length
 
         return array
+
+    @staticmethod
+    def inverse_permuatation(permutation):
+
+        array_length = len(permutation)
+        for i in xrange(array_length):
+            from_index = i
+            to = permutation[from_index]
+            while True:
+                if to < 0:
+                    break
+                else:
+                    next_from = permutation[to]
+                    permutation[to] = from_index - array_length
+                    from_index=to
+                    to=next_from
+
+
+        for i in xrange(array_length):
+            permutation[i] += array_length
+
+        return permutation
+
 
     # @staticmethod
     # def inverse_permutation(permutation):
