@@ -107,7 +107,6 @@ class Main:
 
     @staticmethod
     def swap(array, i, j):
-        print ("swapping "+array[i]+":"+str(i)+" with "+array[j]+":"+str(j))
         tmp = array[i]
         array[i] = array[j]
         array[j] = tmp
