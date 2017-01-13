@@ -19,11 +19,11 @@ class Test_06_11(unittest.TestCase):
             self.add_to_map(dir, hash)
         print(str(dir))
 
-    def add_to_map(self, dir, hash):
-        if not dir.has_key(hash):
-            dir[hash] = 1
+    def add_to_map(self, dict, hash):
+        if not dict.has_key(hash):
+            dict[hash] = 1
         else:
-            dir[hash] += 1
+            dict[hash] += 1
 
     #python radom is inclusive
     def test2(self):
